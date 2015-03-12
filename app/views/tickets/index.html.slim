@@ -1,0 +1,26 @@
+div.page-header
+  h1 Listing tickets
+
+table.table.table-striped
+  thead
+    tr
+      th ID
+      th Description
+      th Actions
+
+  tbody
+    - @tickets.each do |ticket|
+      tr
+        /td= link_to_if can?(:show, ticket), ticket.id, ticket_path(ticket)
+        td= link_to ticket.id, ticket_path(ticket)
+        td= ticket.description
+          td
+          /- if can? :edit, ticket
+          = link_to text_with_icon('Edit', 'edit'), edit_ticket_path(ticket), class: 'btn btn-default btn-xs'
+          '
+          /- if can? :destroy, ticket
+          = link_to text_with_icon('Destroy', 'remove'), ticket_path(ticket), \
+                    method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-default btn-xs btn-danger'
+
+/- if can? :create, Ticket
+= link_to text_with_icon('New Ticket', 'plus'), new_ticket_path, class: 'btn btn-primary'

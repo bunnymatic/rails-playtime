@@ -6,7 +6,7 @@ ruby '2.1.5'
 gem 'puma'
 gem 'rack-timeout'
 gem 'rack-canonical-host'
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 4.1.9'
 gem 'pg'
 
 gem 'slim-rails'
@@ -19,6 +19,9 @@ gem 'uglifier'
 
 gem 'awesome_print'
 
+gem "active_model_serializers", "~> 0.9"
+#gem "active_model_serializers", github: "rails-api/active_model_serializers", branch: "0-8-stable"
+
 group :production, :acceptance do
   gem 'rails_stdout_logging'
   gem 'heroku_rails_deflate'
@@ -26,6 +29,7 @@ end
 
 group :test do
   gem 'fuubar'
+  gem 'faker'
   gem 'capybara'
   #gem 'capybara-email'
   gem 'poltergeist'
@@ -36,6 +40,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'pry-byebug'
   gem 'factory_girl_rails'
   gem 'jasmine-rails'
   #gem 'cane'
@@ -43,8 +48,8 @@ group :test, :development do
 end
 
 group :development do
-  gem 'spring'
-  gem 'spring-commands-rspec'
+  #gem 'spring'
+  #gem 'spring-commands-rspec'
   gem 'foreman'
   gem 'launchy'
   gem 'better_errors'
