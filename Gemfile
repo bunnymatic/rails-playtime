@@ -19,8 +19,8 @@ gem 'uglifier'
 
 gem 'awesome_print'
 
-gem "active_model_serializers", "~> 0.9"
-#gem "active_model_serializers", github: "rails-api/active_model_serializers", branch: "0-8-stable"
+#gem "active_model_serializers", "~> 0.9"
+gem "active_model_serializers", github: "rails-api/active_model_serializers", branch: "0-8-stable"
 
 group :production, :acceptance do
   gem 'rails_stdout_logging'
