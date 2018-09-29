@@ -1,13 +1,38 @@
-javascript:
-  /* This little bit of silliness is here to ensure our js feature specs are working. Remove at will. */
-  $(document).ready(function() {
-    $(".jumbotron p:last").after("<p>Enjoy!</p>")
-  });
+h2 people
+table
+  thead
+    tr
+      th Name
+      th Toys
 
-.jumbotron
-  h1 Hello, world!
-  br
-  p Welcome to your newly generated rails application...
-  p Meander around the code to see what's been done for you. Many small, and a few not-so-small, customizations have been made.
-  p Custom generator templates create views that are bootstrap compatible and specs that are factory-aware and follow best practices.
-  p Your application is ready for easy deployment to heroku.
+  tbody
+    - @people.each do |person|
+      tr
+        td = person.name
+        td = person.toys.map(&:name).join(",")
+
+h2 toys
+table
+  thead
+    tr
+      th Name
+      th people
+
+  tbody
+    - @toys.each do |toy|
+      tr
+        td = toy.name
+        td = toy.people.map(&:name).join(",")
+
+h2 Companies
+table
+  thead
+    tr
+      th Name
+      th In Fund
+
+  tbody
+    - @companies.each do |company|
+      tr
+        td = company.name
+        td = company.companies_in_fund.map(&:name).join(",")
