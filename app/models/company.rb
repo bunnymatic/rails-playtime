@@ -12,5 +12,6 @@ class Company < ApplicationRecord
 
   has_many :fund_companies, foreign_key: :container_company_id, inverse_of: :container_company
   has_many :companies_in_fund, through: :fund_companies, source: :company_in_fund
+  has_many :funds_this_company_is_in, through: :fund_companies, source: :container_company
 
 end
