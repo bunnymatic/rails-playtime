@@ -41,5 +41,5 @@ end
 
 puts "Associating fund companies"
 companies.sample(3).each do |company|
-  company.companies_in_fund = companies.sample(3)
+  company.companies_in_fund = companies.sample(3) - [company]
 end

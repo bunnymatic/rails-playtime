@@ -30,9 +30,10 @@ table
     tr
       th Name
       th In Fund
-
+      th Funds I'm In
   tbody
     - @companies.each do |company|
       tr
         td = company.name
         td = company.companies_in_fund.map(&:name).join(",")
+        td = company.funds_this_company_is_in.map(&:name).join(",")
