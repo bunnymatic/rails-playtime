@@ -36,6 +36,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "rspec_junit_formatter"
   gem "rubocop", require: false
+  gem "timecop"
 end
 
 group :development do
