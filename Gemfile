@@ -61,3 +61,10 @@ group :test do
   gem "chromedriver-helper"
   gem "simplecov"
 end
+
+gem "rack-mini-profiler", "~> 2.0"
+
+gem "rubocop-performance", "~> 1.0"
+
+
+gem "view_component", "~> 2.6"

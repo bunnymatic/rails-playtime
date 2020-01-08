@@ -149,6 +149,8 @@ GEM
     rack-canonical-host (1.0.0)
       addressable (> 0, < 3)
       rack (>= 1.0.0, < 3)
+    rack-mini-profiler (2.0.1)
+      rack (>= 1.2.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rack-timeout (0.6.0)
@@ -209,6 +211,8 @@ GEM
       rexml
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-performance (1.5.2)
+      rubocop (>= 0.71.0)
     ruby-progressbar (1.10.1)
     rubyzip (2.3.0)
     sass (3.7.4)
@@ -266,6 +270,8 @@ GEM
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.7.0)
+    view_component (2.6.0)
+      activesupport (>= 5.0.0, < 7.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -295,11 +301,13 @@ DEPENDENCIES
   pg
   puma
   rack-canonical-host
+  rack-mini-profiler (~> 2.0)
   rack-timeout
   rails (~> 5.2.0)
   rspec-rails
   rspec_junit_formatter
   rubocop
+  rubocop-performance (~> 1.0)
   sass-rails
   sassc-rails
   simple_form
@@ -310,6 +318,7 @@ DEPENDENCIES
   spring-watcher-listen
   timecop
   uglifier
+  view_component (~> 2.6)
 
 RUBY VERSION
    ruby 2.6.6p146
