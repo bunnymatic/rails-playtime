@@ -1,0 +1,45 @@
+.drawer {
+  background-color: #fafafa;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 8px 1px rgba(140,123,140,1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 1s ease-in-out, top 1s ease-in-out, left 1s ease-in-out;
+  width: 500px;
+  overflow: auto;
+  max-height: 90%;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.drawer.hidden {
+  left: calc(100% + 250px + 20px);
+}
+
+
+.drawer-trigger {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 41px;
+  width: 41px;
+  background-color: orange;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  opacity: 0.8;
+  color: white;
+  font-size: 40px;
+  &:hover {
+    border: 1px solid red;
+  }
+
+}
+.drawer-trigger > span {
+  line-height: 1;
+  display: block;
+  position: relative;
+  top: -6px;
+  left: 0px;
+}
