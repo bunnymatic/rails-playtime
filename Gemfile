@@ -6,6 +6,7 @@ ruby "2.6.6"
 
 # Back-endy
 gem "bootsnap", require: false
+gem "faker"
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
@@ -36,6 +37,8 @@ group :development, :test do
   gem "rspec-rails"
   gem "rspec_junit_formatter"
   gem "rubocop", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false  
   gem "timecop"
 end
 
