@@ -41,7 +41,8 @@ html
             span aria-hidden="true" &times;
           = raw(msg)
       = render "nav"
-      = yield
+      - benchmark(request.fullpath) do
+        = yield
 
     footer.footer
       .container

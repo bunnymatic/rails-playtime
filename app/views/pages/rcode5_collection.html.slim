@@ -4,10 +4,10 @@
       code
         = "# Rcode5::Components\n"
         = "- (@count || 1).to_i.times.each\n"
-        = '  = render UserComponent.new(name: "jon")\n'
+        = '  = render UserComponent.new()\n'
 
   br
 
   .components-list
     .component
-      = render (@count || 1).to_i.times.map { UserComponent.new(name: "jon") }
+      = render (@count || 1).to_i.times.map { UserComponent.new() }

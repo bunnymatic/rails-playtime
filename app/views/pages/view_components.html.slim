@@ -2,11 +2,11 @@
   h4
     pre
       code
-        = "# ViewComponents\n"
-        = " - (@count || 1).to_i.times.each\n"
-        = "   = render UserViewComponent.new(name: \"jon\")"
+        | # ViewComponents
+          - (@count || 1).to_i.times.each\n"
+            = render UserViewComponent.new()"
   br
   .components-list
     .component
       - (@count || 1).to_i.times.each
-        = render UserViewComponent.new(name: "jon")
+        = render UserViewComponent.new()

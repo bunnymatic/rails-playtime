@@ -2,12 +2,13 @@
   h4
     pre
       code
-        = " - (@count || 1).to_i.times.each\n"
-        = '   = render "component", locals: { name: "jon" }'
+        | Partials (in a loop)
+          - (@count || 1).to_i.times.each
+            = render "component"
 
   br
 
   .components-list
     .component
       - (@count || 1).to_i.times.each
-        = render "component", locals: { name: 'jon' }
+        = render "component"

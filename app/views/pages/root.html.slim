@@ -2,13 +2,13 @@
   h4
     pre
       code
-        = "# Rcode5::Components\n"
-        = "- (@count || 1).to_i.times.each\n"
-        = '  = render UserComponent.new(name: "jon")\n'
+        | # Rcode5::Components
+          - (@count || 1).to_i.times.each
+            = render UserComponent.new()
 
   br
 
   .components-list
     .component
       - (@count || 1).to_i.times.each
-        = render UserComponent.new(name: "jon")
+        = render UserComponent.new()
