@@ -1,0 +1,13 @@
+- collection = (@count || 1).to_i.times.map { |x| { name: 'jon' } }
+.jumbotron
+  h4
+    pre
+      code
+        = " - collection = (@count || 1).to_i.times.map { |x| { name: 'jon' } }\n"
+
+        = ' = render partial: "component", collection: collection'
+  br
+
+  .components-list
+    .component
+      = render partial: "component", collection: collection

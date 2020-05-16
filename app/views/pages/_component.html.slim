@@ -1,0 +1,14 @@
+ruby:
+  name ||= name
+  component ||= component
+  domains = [
+    "https://www.placecage.com/",
+    "https://placekitten.com/",
+    "https://placebear.com/",
+    "https://www.stevensegallery.com/",
+  ]
+  image = "#{domains.sample}#{rand(10) * 10 + 300}/#{rand(10) * 10 + 200}"
+
+.user-component
+  h1 User Name: #{(component && component['name']) || name}
+  img src=image

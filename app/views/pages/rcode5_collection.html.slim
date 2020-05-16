@@ -10,5 +10,4 @@
 
   .components-list
     .component
-      - (@count || 1).to_i.times.each
-        = render UserComponent.new(name: "jon")
+      = render (@count || 1).to_i.times.map { UserComponent.new(name: "jon") }

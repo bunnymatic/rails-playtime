@@ -1,0 +1,13 @@
+.jumbotron
+  h4
+    pre
+      code
+        = " - (@count || 1).to_i.times.each\n"
+        = '   = render "component", locals: { name: "jon" }'
+
+  br
+
+  .components-list
+    .component
+      - (@count || 1).to_i.times.each
+        = render "component", locals: { name: 'jon' }
