@@ -1,0 +1,57 @@
+/*************
+* Sharp Sans *
+*************/
+
+@function font-face-src($filename) {
+  // Create a src value for a font face declaration,
+  // ensuring browser support.
+  //
+  // See https://css-tricks.com/snippets/css/using-font-face/
+
+  @return font-url("#{$filename}.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ font-url("#{$filename}.woff2") format("woff2"),
+    /* Super Modern Browsers */ font-url("#{$filename}.woff") format("woff"); /* Modern Browsers */
+}
+
+@mixin font-face($font-family, $filename, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    font-weight: $weight;
+    src: font-face-src($filename);
+  }
+
+  @font-face {
+    font-family: "#{$font-family}";
+    font-weight: $weight;
+    font-style: italic;
+    src: font-face-src("#{$filename}Italic");
+  }
+}
+
+@include font-face("Sharp Sans", "SharpSans-Book", 300);
+@include font-face("Sharp Sans", "SharpSans-Medium", 500);
+@include font-face("Sharp Sans", "SharpSans-Semibold", 600);
+
+@mixin sharp-sans($weight, $style: normal) {
+  font-family: "Sharp Sans";
+  font-weight: $weight;
+  font-style: $style;
+}
+
+body div {
+  @include sharp-sans(600);
+  font-size: 20px;
+  line-height: 40px;
+}
+
+html * {
+  @include sharp-sans(300);
+  font-size: 32px;
+  line-height: 42px;
+}
+
+body span {
+  @include sharp-sans(500, italic);
+  font-size: 32px;
+  line-height: 42px;
+}
