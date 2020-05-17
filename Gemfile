@@ -9,7 +9,7 @@ gem "bootsnap", require: false
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
-gem "rails", "~> 5.2.0"
+gem "rails", "~> 6.x"
 
 # Front-endy
 gem "autoprefixer-rails"
@@ -61,3 +61,7 @@ group :test do
   gem "chromedriver-helper"
   gem "simplecov"
 end
+
+gem "rack-cors", "~> 1.1"
+
+gem "rubocop-performance", "~> 1.5"
