@@ -22,7 +22,8 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
   config.public_file_server.headers = {
-    "Access-Control-Allow-Origin" => ENV["CORS_ORIGINS"]
+    "Access-Control-Allow-Origin" => ENV["CORS_ORIGINS"],
+    "Access-Control-Expose-Headers" => '*'
   }
 
   # Compress JavaScripts and CSS.
