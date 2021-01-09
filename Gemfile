@@ -9,7 +9,7 @@ gem "bootsnap", require: false
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
-gem "rails", "~> 5.2.0"
+gem "rails"
 
 # Front-endy
 gem "autoprefixer-rails"
@@ -61,3 +61,13 @@ group :test do
   gem "chromedriver-helper"
   gem "simplecov"
 end
+
+gem "clearance", "~> 2.3"
+
+gem "cucumber", "~> 4.1"
+
+gem "cucumber-rails", "~> 2.2", require: false
+
+gem "webdrivers", "~> 4.4"
+
+gem "database_cleaner", "~> 1.8"

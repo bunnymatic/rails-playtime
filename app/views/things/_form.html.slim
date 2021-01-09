@@ -1,0 +1,9 @@
+= form_for(thing, remote: true) do |f|
+
+  .form-inputs
+    = f.check_box :accepted, autofocus: true
+
+  => button_tag type: "submit", class: "btn btn-primary" do
+    = "#{btn_action_prefix} Thing"
+
+  = link_to "Back", :back, class: "btn btn-secondary"

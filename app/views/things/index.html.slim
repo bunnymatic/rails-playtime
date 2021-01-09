@@ -1,0 +1,26 @@
+div.page-header
+  h1 Things
+
+table.table.table-striped.table-hover
+  thead
+    tr
+      th ID
+      th Accepted
+      th Actions
+
+  tbody
+    - @things.each do |thing|
+      tr
+        /td= link_to_if policy(thing).show?, thing.id, thing_path(thing)
+        td= link_to thing.id, thing_path(thing)
+        td= thing.accepted
+        td
+          /- if policy(thing).edit?
+          = link_to "Edit", edit_thing_path(thing), class: "btn btn-primary btn-xs"
+          '
+          /- if policy(thing).destroy?
+          = link_to "Destroy", thing_path(thing),
+                  method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs"
+
+/- if policy(Thing).create?
+= link_to "New Thing", new_thing_path, class: "btn btn-primary"
