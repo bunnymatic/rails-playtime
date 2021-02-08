@@ -6,7 +6,8 @@ ruby "2.6.6"
 
 # Back-endy
 gem "bootsnap", require: false
-gem "pg"
+#gem "pg"
+gem "mysql2"
 gem "puma"
 gem "rack-canonical-host"
 gem "rails"
@@ -62,12 +63,16 @@ group :test do
   gem "simplecov"
 end
 
-gem "clearance", "~> 2.3"
+#gem "clearance", "~> 2.3"
 
-gem "cucumber", "~> 4.1"
-
-gem "cucumber-rails", "~> 2.2", require: false
+gem "cucumber-rails"
 
 gem "webdrivers", "~> 4.4"
 
 gem "database_cleaner", "~> 1.8"
+
+gem "authlogic", "~> 6.4"
+
+gem "scrypt", "~> 3.0"
+
+gem "rubocop-performance", "~> 1.7"

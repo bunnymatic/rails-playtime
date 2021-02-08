@@ -5,6 +5,7 @@
 # files.
 
 require 'cucumber/rails'
+require 'database_cleaner'
 
 Dir[Rails.root.join('features/support/**/*.rb')].sort.each { |f| require f }
 

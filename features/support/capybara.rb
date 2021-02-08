@@ -22,11 +22,10 @@ Capybara.register_driver :headless_chrome do |app|
                                  desired_capabilities: capabilities
 end
 
-#Capybara.javascript_driver = :headless_chrome
-#Capybara.javascript_driver = :chrome if ENV['USE_CHROME']
+Capybara.javascript_driver = :headless_chrome
+Capybara.javascript_driver = :chrome if ENV['USE_CHROME']
 
 Before('@javascript') do |_scenario, _block|
-  puts("ADDING AUTH KEYS")
   if page.driver.respond_to? :header
     page.driver.header 'Authorization', ENV.fetch('API_CONSUMER_KEY', 'Testing Testing 1 2')
   elsif page.driver.respond_to? :add_header

@@ -3,7 +3,7 @@ Given('an account has been created') do
 end
 
 Given('I visit the login page') do
-  visit sign_in_path
+  visit new_user_session_path
 end
 
 When('I fill in valid credentials') do
