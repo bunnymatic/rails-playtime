@@ -1,8 +1,6 @@
 name: Merge main into PR branches labeled "automerge main"
 on:
-  pull_request:
-    types: [labeled]
-    branches: "automerge/*"
+  branches: "*"
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
