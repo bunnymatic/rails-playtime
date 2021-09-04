@@ -1,0 +1,22 @@
+name: Merge main into PR branches labeled "automerge main"
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  get_pull_requests:
+    runs-on: ubuntu-latest
+    name: Show pull requests
+    steps:
+      - name: listPullRequests
+        uses: buildsville/list-pull-requests@v1
+        id: list
+        with:
+          token: ${{github.token}}
+      - name: output
+        run: echo '${{ steps.list.outputs.pulls }}'
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      run: echo '${{ steps.list.outputs.pulls }}'
