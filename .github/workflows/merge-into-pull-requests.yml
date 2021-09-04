@@ -10,8 +10,8 @@ jobs:
     name: Show pull requests
     steps:
       - uses: buildsville/list-pull-requests@v1
+        id: list
         with:
-          id: list
           token: ${{github.token}}
           labels: '[]'
           skip_hour: ''
