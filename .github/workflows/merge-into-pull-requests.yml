@@ -9,12 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Show pull requests
     steps:
-      - uses: buildsville/list-pull-requests@v1
+      - uses: rcode5/list-pull-requests@master
         id: list
         with:
           token: ${{github.token}}
-          labels: '["automerge main"]'
-          skip_hour: ''
+          labels: ''
       - run: echo '${{ steps.list.outputs.pulls }}'
   merge-branch:
     runs-on: ubuntu-latest
