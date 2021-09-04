@@ -2,8 +2,11 @@ name: Merge main into PR branches labeled "automerge main"
 
 on:
   push:
-    branches: "automerge*"
-
+    branches:
+      - "automerge/*"
+  pull_request:
+    branches:
+      - "automerge/*"
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
