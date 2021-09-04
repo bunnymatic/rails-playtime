@@ -16,4 +16,4 @@ jobs:
           root_branch: "master"
           labels: "automerge main"
 
-      - run: echo '${{ steps.merger.outputs.pulls }}'
+      - run: echo '${{ steps.merger.outputs.merged }}'
