@@ -1,0 +1,23 @@
+name: Merge main into PR branches labeled "automerge main"
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  get_pull_requests:
+    runs-on: ubuntu-latest
+    name: Show pull requests
+    steps:
+      - uses: rcode5/list-pull-requests@master
+        id: list
+        with:
+          token: ${{github.token}}
+          root_branch: "master"
+          labels: "automerge main"
+
+      - run: echo '${{ steps.list.outputs.pulls }}'
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ steps.list.outputs.pulls }}'
