@@ -1,6 +1,9 @@
 name: Merge main into PR branches labeled "automerge main"
 on:
-  branches: "*"
+  push:
+    branches: "*"
+  pull_request:
+    types: [labeled]
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
@@ -12,4 +15,5 @@ jobs:
         with:
           label_name: 'automerge main'
           from_branch: master
+          target_branch: ${{ github.sha }}
           github_token: ${{ github.token }}
