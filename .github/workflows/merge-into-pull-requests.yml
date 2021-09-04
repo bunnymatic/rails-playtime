@@ -13,7 +13,8 @@ jobs:
         id: list
         with:
           token: ${{github.token}}
-          labels: ''
+          root_branch: "master"
+
       - run: echo '${{ steps.list.outputs.pulls }}'
   merge-branch:
     runs-on: ubuntu-latest
