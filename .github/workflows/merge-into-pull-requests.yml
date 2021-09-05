@@ -7,13 +7,10 @@ on:
 jobs:
   get_pull_requests:
     runs-on: ubuntu-latest
-    name: Show pull requests
+    name: Keep PRs up to date
     steps:
-      - uses: rcode5/list-pull-requests@master
+      - uses: rcode5/keep-prs-up-to-date@main
         id: merger
         with:
           token: ${{github.token}}
           root_branch: "master"
-          labels: "automerge main"
-
-      - run: echo '${{ steps.merger.outputs.merged }}'
