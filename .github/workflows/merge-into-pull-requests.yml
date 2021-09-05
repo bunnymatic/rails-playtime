@@ -14,3 +14,4 @@ jobs:
         with:
           token: ${{github.token}}
           default_branch: "master"
+          labels: "automerge main"
