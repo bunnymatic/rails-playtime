@@ -2,13 +2,13 @@
   h4
     pre
       code
-        | # Rcode5::Components
+        | Partials (in a loop)
           - (@count || 1).to_i.times.each
-            = render UserComponent.new()
+            = render "component"
 
   br
 
   .components-list
     .component
       - (@count || 1).to_i.times.each
-        = render UserComponent.new()
+        = render "component"

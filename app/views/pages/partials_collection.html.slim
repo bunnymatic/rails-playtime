@@ -1,0 +1,13 @@
+- collection = (@count || 1).to_i.times
+.jumbotron
+  h4
+    pre
+      code
+        | # Partials with collection attribute
+          - collection = (@count || 1).to_i.times\n"
+          = render partial: "component", collection: collection\n'
+  br
+
+  .components-list
+    .component
+      = render partial: "component", collection: collection

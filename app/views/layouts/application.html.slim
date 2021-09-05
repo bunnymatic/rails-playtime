@@ -40,7 +40,9 @@ html
           button.close type="button" data-dismiss="alert" aria-label="Close"
             span aria-hidden="true" &times;
           = raw(msg)
-      = yield
+      = render "nav"
+      - benchmark(request.fullpath) do
+        = yield
 
     footer.footer
       .container
