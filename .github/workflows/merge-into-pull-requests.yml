@@ -13,4 +13,4 @@ jobs:
         id: merger
         with:
           token: ${{github.token}}
-          root_branch: "master"
+          default_branch: "master"
