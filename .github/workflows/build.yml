@@ -11,7 +11,3 @@ jobs:
     steps:
       - name: Report
         run:  echo "Building..."
-      - name: Spec
-        run:  bundle install
-      - name: Spec
-        run:  bundle exec spec
