@@ -1,0 +1,12 @@
+.jumbotron
+  h4
+    pre
+      code
+        | # ViewComponents
+          - (@count || 1).to_i.times.each\n"
+            = render UserViewComponent.new()"
+  br
+  .components-list
+    .component
+      - (@count || 1).to_i.times.each
+        = render UserViewComponent.new()
