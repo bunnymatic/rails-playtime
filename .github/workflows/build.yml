@@ -4,6 +4,8 @@ on:
   push:
     branches-ignore:
       - master
+  pull_request:
+    types: [ synchronize ]
   workflow_dispatch:
 jobs:
   get_pull_requests:
