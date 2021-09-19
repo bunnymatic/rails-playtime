@@ -2,3 +2,7 @@
 @import "_navbar";
 @import "_footer";
 @import "_buttons";
+
+@import "drawer";
+
+[hidden] { display: none !important; }

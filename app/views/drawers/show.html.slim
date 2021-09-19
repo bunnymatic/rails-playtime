@@ -1,0 +1,17 @@
+.js-drawer.drawer.hidden data-trigger-selector=".drawer-trigger" hidden="hidden"
+  .drawer__content
+    - @drawer_content.each do |paragraph|
+      p = paragraph
+
+.content
+  h1 content goes here
+  - @content.each do |paragraph|
+    p = paragraph
+
+button.drawer-trigger 
+  span &plus;
+  
+
+
+javascript:
+  new window.bendable.Drawer('.js-drawer')
