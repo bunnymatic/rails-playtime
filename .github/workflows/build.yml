@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+    branches_exclude:
+      - main
+jobs:
+  get_pull_requests:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Report
+        run:  echo "Building..."
+      - name: Spec
+        run:  bundle install
+      - name: Spec
+        run:  bundle exec spec
