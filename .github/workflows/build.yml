@@ -2,8 +2,8 @@ name: Build
 
 on:
   push:
-    branches_exclude:
-      - main
+    branches-ignore:
+      - master
 jobs:
   get_pull_requests:
     runs-on: ubuntu-latest
