@@ -1,0 +1,11 @@
+= simple_form_for(image) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name, autofocus: true
+    = f.input :image
+
+  => button_tag type: "submit", class: "btn btn-primary" do
+    = "#{btn_action_prefix} Image"
+
+  = link_to "Back", :back, class: "btn btn-secondary"

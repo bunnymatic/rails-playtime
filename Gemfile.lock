@@ -202,8 +202,6 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rspec_junit_formatter (0.5.1)
-      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (1.33.0)
       json (~> 2.3)
       parallel (~> 1.10)
@@ -270,7 +268,6 @@ GEM
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.11)
-    timecop (0.9.5)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.2.0)
@@ -300,7 +297,6 @@ DEPENDENCIES
   rack-canonical-host
   rails (~> 6.x)
   rspec-rails
-  rspec_junit_formatter
   rubocop
   rubocop-performance
   rubocop-rails
@@ -310,7 +306,6 @@ DEPENDENCIES
   simplecov
   slim-rails
   sprockets-rails
-  timecop
 
 RUBY VERSION
    ruby 2.6.6p146
