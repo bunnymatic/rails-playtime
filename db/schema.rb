@@ -49,22 +49,6 @@ ActiveRecord::Schema.define(version: 2022_08_07_015407) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "leases", force: :cascade do |t|
-    t.bigint "tenant_id"
-    t.bigint "landlord_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["landlord_id"], name: "index_leases_on_landlord_id"
-    t.index ["tenant_id"], name: "index_leases_on_tenant_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
